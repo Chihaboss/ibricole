@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const LoginScreen = ({ navigation }) => {
-    const [email, setEmail] = useState('1234@test.com');
-    const [password, setPassword] = useState('1234');
+const LoginScreen = ({ setIsSignedIn }) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
   // Fonction pour gérer la connexion
   const handleLogin = () => {
     // Ici, vous intégrerez la logique de vérification des identifiants
-    if (email === '1234@test.com' && password === '1234') {
-        console.log('Connexion réussie');
-        // navigation.navigate('Home'); // Naviguer vers l'écran d'accueil après la connexion réussie
-      } else {
-        console.log('Identifiants incorrects');
-        // Gérer les identifiants incorrects ici
-      }
+    if (email === '12345@test.com' && password === '1234') {
+      // Si les identifiants sont corrects
+      setIsSignedIn(true);
+    } else {
+      // Sinon, afficher une erreur ou un message
+      alert('Identifiants incorrects');
+    }
   };
 
   return (

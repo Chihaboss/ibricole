@@ -1,6 +1,8 @@
 // Importez les composants nécessaires de React Native
 import React, { useState } from 'react';
-import { View, TextInput, Button, Picker, StyleSheet, Text } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
+
 
 const SearchScreen = ({ navigation }) => {
   const [searchQuery, setSearchQuery] = useState('');
